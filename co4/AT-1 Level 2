@@ -1,0 +1,212 @@
+CO4 Assessment Tool 1							Name: ALAN PHILIP
+LEVEL 2 & Viva-voce								Reg. No: 192511484
+
+============================================================================================
+Student #11 | ALAN PHILIP | 192511484HC
+============================================================================================
+[1] QID: 36
+Question : Write a program to count all the prime and composite numbers entered by the user.
+Sample Input:
+Enter the numbers
+4
+54
+29
+71
+7
+59
+98
+23
+Sample Output:
+Composite number:3
+Prime number:5
+Testcases:
+1. 33, 41, 52, 61,73,90
+2. TEN, FIFTY, SIXTY-ONE, SEVENTY-SEVEN, NINE
+3. 45, 87, 09, 5.0 ,2.3, 0.4
+4. -54, -76, -97, -23, -33, -98
+5. 45, 73, 00, 50, 67, 44
+
+Program : import java.util.Scanner;
+class Number {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter range");
+int n = sc.nextInt();
+int arr[] = new int[n];
+int flag = 0;
+int primecount = 0;
+int compcount = 0;
+System.out.println("Enter "+n+" numbers");
+for(int i = 0; i < n; i++) {
+arr[i] = sc.nextInt();
+}
+for(int i = 0; i < n; i++) {
+for(int j = 2; j
+Input : 6
+
+Submitted Answers Report
+11
+43
+21
+7
+9
+6
+
+Output : Enter range
+Enter 6 numbers
+Prime numbers: 1
+Composite numbers: 5
+
+First Save: 2026-06-23 15:37:10
+Last Save : 2026-06-23 16:23:25
+----------------------------------------------------------------------------------------
+[2] QID: 13
+Question : Write a program for matrix multiplication?
+Sample Input:
+Mat1 =
+1 2
+5 3
+Mat2 =
+2 3
+4 1
+Sample Output:
+Mat Sum =
+10 5
+22 18
+
+Program : import java.util.Scanner;
+public class Matrix {
+public static void main(String[] args) {
+int mat1[][] = new int[2][2];
+int mat2[][] = new int[2][2];
+int mul_matrix[][] = new int[2][2];
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter Matrix 1 elements: ");
+for(int i = 0; i < 2; i++) {
+for(int j = 0; j < 2; j++) {
+mat1[i][j] = sc.nextInt();
+}
+}
+System.out.println("Enter Matrix 2 elements: ");
+for(int i = 0; i < 2; i++) {
+for(int j = 0; j < 2; j++) {
+mat2[i][j] = sc.nextInt();
+}
+}
+for(int i = 0; i < 2; i++) {
+for(int j = 0; j < 2; j++) {
+for(int k = 0; k < 2; k++) {
+mul_matrix[i][j] = mat1[i][k] * mat2[k][j];
+}
+}
+}
+System.out.println("NEW Matrix after multiplication: ");
+
+Submitted Answers Report
+for(int i = 0; i < 2; i++) {
+for(int j = 0; j < 2; j++) {
+System.out.print(mul_matrix[i][j]+"\t");
+}
+System.out.println();
+}
+}
+}
+Input : 1
+2
+5
+3
+2
+3
+4
+1
+
+Output : Enter Matrix 1 elements:
+Enter Matrix 2 elements:
+NEW Matrix after multiplication:
+8 2
+12 3
+
+First Save: 2026-06-23 15:09:29
+Last Save : 2026-06-23 16:23:18
+----------------------------------------------------------------------------------------
+[3] QID: 43
+Question : Write a program to enter the marks of a student in four subjects. Then calculate
+the total and aggregate, display the grade obtained by the student.
+If the student scores an aggregate greater than 75%, then the grade is Distinctio
+n.
+If aggregate is 60>= and = and = and
+Program : import java.util.Scanner;
+public class Student {
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+int[] marks = new int[4];
+int total = 0;
+double aggregate = 0.0;
+System.out.println("Enter marks of 4 subjects: ");
+for(int i = 0; i < 4; i++) {
+marks[i] = sc.nextInt();
+}
+for(int i = 0; i < 4; i++) {
+total = total + marks[i];
+}
+aggregate = (total/4) * 100;
+if(aggregate >= 75)
+System.out.println("Grade: Distinction");
+else if(aggregate >= 60 && aggregate < 75)
+System.out.println("Grade: First Class");
+else if(aggregate >= 50 && aggregate < 60)
+System.out.println("Grade: Second Class");
+
+Submitted Answers Report
+else if(aggregate >= 40 && aggregate < 50)
+System.out.println("Grade: Third Class");
+else
+System.out.println("Grade: Fail");
+}
+}
+Input : 73
+78
+79
+85
+Output : Enter marks of 4 subjects:
+Grade: Distinction
+
+First Save: 2026-06-23 14:59:34
+Last Save : 2026-06-23 16:23:28
+----------------------------------------------------------------------------------------
+[4] QID: 39
+Question : Write a program using choice to check
+Case 1: Given string is palindrome or not
+Case 2: Given number is palindrome or not
+Sample Input:
+Case = 1
+String = MADAM
+Sample Output:
+Palindrome
+Testcases: 1. MONEY
+2. 5678765
+3. MALAY12321ALAM
+4. MALAYALAM
+5. 1234.4321
+Program : import java.util.*;
+class Palindrome {
+public static void main(String[] args){
+Scanner sc = new Scanner(System.in);
+String str = sc.nextLine();
+String revstr = "";
+for(int i = str.length()-1; i >= 0; i--) {
+revstr = revstr + str.charAt(i);
+}
+if(str != revstr)
+System.out.println("Palindrome");
+else
+System.out.println("Not Palindrome");
+}
+}
+Input : MADAM
+Output : Palindrome
+
+First Save: 2026-06-23 14:45:58
+Last Save : 2026-06-23 16:23:26
+
+
